@@ -1,0 +1,179 @@
+@import url("https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Public Sans", sans-serif;
+}
+
+body {
+  color: var(--dark-blue);
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+:root {
+  /*primary*/
+  --dark-blue: hsl(233, 26%, 24%);
+  --lime-green: hsl(136, 65%, 51%);
+  --bright-cyan: hsl(192, 70%, 51%);
+  /*neutral*/
+  --gray-blue: hsl(233, 8%, 62%);
+  --light-gray-blue: hsl(220, 16%, 96%);
+  --light-gray: hsl(0, 0%, 98%);
+  --fs: 18px;
+  --fw-300: 300;
+  --fw-400: 400;
+  --fw-700: 700;
+}
+
+/*Header*/
+header {
+  position: relative;
+  height: 80px;
+  z-index: 9999;
+  background-color: #fff;
+}
+
+.inner-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  height: 100%;
+  width: 90%;
+  margin: 0 auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.logo {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  float: left;
+}
+
+.navigation {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+}
+
+.nav-btn {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.nav-btn a {
+  float: right;
+}
+
+.navigation ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  height: 100%;
+}
+
+.navigation ul a {
+  color: var(--gray-blue);
+}
+
+.navigation ul a:hover {
+  color: var(--dark-blue);
+}
+
+/* Main */
+.main-wrapper {
+  width: 100%;
+  height: 800px;
+}
+
+.main-inner {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.text-side {
+  margin-left: 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 42.5%;
+      -ms-flex: 42.5%;
+          flex: 42.5%;
+}
+
+.images-side {
+  height: 600px;
+  background-image: url(./images/bg-intro-desktop.svg);
+  background-position: top right;
+  background-size: contain;
+  background-repeat: no-repeat;
+  -webkit-box-flex: 57.5%;
+      -ms-flex: 57.5%;
+          flex: 57.5%;
+  width: 100%;
+  position: relative;
+  top: -100px;
+}
+
+.images-side img {
+  width: auto;
+}
+
+/* Button */
+.request-invite-btn {
+  padding: 10px;
+  text-align: center;
+  background-size: 200% auto;
+  text-transform: capitalize;
+  width: 200px;
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  -webkit-transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+  cursor: pointer;
+  display: inline-block;
+  border-radius: 25px;
+  color: #fff;
+}
+
+.request-invite-btn {
+  background-image: -webkit-gradient(linear, left top, right top, from(var(--lime-green)), color-stop(50%, var(--bright-cyan)));
+  background-image: linear-gradient(to right, var(--lime-green), var(--bright-cyan) 50%);
+}
+
+.request-invite-btn:hover {
+  background-position: right center;
+}
+/*# sourceMappingURL=style.css.map */
