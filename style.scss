@@ -14,6 +14,7 @@
 }
 body {
     color: var(--dark-blue);
+    overflow-x: hidden;
 }
 a {
     text-decoration: none;
@@ -83,7 +84,7 @@ header {
 /* Main */
 .main-wrapper{ 
     width: 100%;
-    height: 800px;
+    // height: 800px;
 }
 .main-inner {
     position: relative;
@@ -93,24 +94,71 @@ header {
     margin-left: 5%;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    margin-top: -5rem;
     flex: 42.5%;
+}
+.text-side h1 {
+    font-weight: var(--fw-500);
+}
+.text-side p {
+    line-height: 20px;
+    font-weight: var(--fw-300);
+    padding: 2rem 0;
 }
 .images-side {
     height: 600px;
     background-image: url(./images/bg-intro-desktop.svg);
     background-position: top right; 
-    background-size: contain;
+    background-size: 100%;
     background-repeat: no-repeat;
     flex: 57.5%;
     width: 100%;
     position: relative;
-    top: -100px;
+    top: -80px;
+    right: -80px;
 }
 .images-side img {
-    width: auto;
+    width: 100%;
+    min-width: 500px;
 }
-
-
+.reasons {
+    background-color: var(--light-gray);
+}
+.inner-reasons {
+    width: 90%;
+    margin: auto;
+    padding: 4rem 0;
+}
+.reasons-title {
+    // margin-top: -4rem;
+}
+.reasons-title h2 {
+    font-weight: var(--fw-400);
+}
+.reasons-title p{
+    line-height: 20px;
+    font-weight: var(--fw-300);
+    padding: 1rem 0;
+}
+.reasons-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1rem;
+}
+.reasons-card {
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.reasons-card h3 {
+    text-transform: capitalize;
+}
+.reasons-card p {
+    line-height: 20px;
+    font-weight: var(--fw-300);
+}
 /* Button */
 .request-invite-btn {
     padding: 10px;
