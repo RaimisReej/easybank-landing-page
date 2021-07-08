@@ -35,6 +35,25 @@ ul {
   --fw-700: 700;
 }
 
+h1 {
+  font-weight: var(--fw-300);
+  font-size: 3rem;
+}
+
+h2 {
+  font-weight: var(--fw-400);
+}
+
+h3 {
+  text-transform: capitalize;
+}
+
+p {
+  line-height: 20px;
+  font-weight: var(--fw-300);
+  padding: 2rem 0;
+}
+
 /*Header*/
 header {
   position: relative;
@@ -101,10 +120,48 @@ header {
 
 .navigation ul a {
   color: var(--gray-blue);
+  position: relative;
 }
 
 .navigation ul a:hover {
   color: var(--dark-blue);
+}
+
+.navigation ul a:hover::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  bottom: -30px;
+  background-image: -webkit-gradient(linear, left top, right top, from(var(--lime-green)), color-stop(50%, var(--bright-cyan)));
+  background-image: linear-gradient(to right, var(--lime-green), var(--bright-cyan) 50%);
+  background-size: 300%;
+  -webkit-animation: animatedGradient 3s ease-in-out alternate infinite;
+          animation: animatedGradient 3s ease-in-out alternate infinite;
+}
+
+@-webkit-keyframes animateGradient {
+  0% {
+    background-size: 100%;
+  }
+  50% {
+    background-size: 200%;
+  }
+  100% {
+    background-size: 600%;
+  }
+}
+
+@keyframes animateGradient {
+  0% {
+    background-size: 100%;
+  }
+  50% {
+    background-size: 200%;
+  }
+  100% {
+    background-size: 600%;
+  }
 }
 
 /* Main */
@@ -137,16 +194,6 @@ header {
           flex: 42.5%;
 }
 
-.text-side h1 {
-  font-weight: var(--fw-500);
-}
-
-.text-side p {
-  line-height: 20px;
-  font-weight: var(--fw-300);
-  padding: 2rem 0;
-}
-
 .images-side {
   height: 600px;
   background-image: url(./images/bg-intro-desktop.svg);
@@ -156,7 +203,6 @@ header {
   -webkit-box-flex: 57.5%;
       -ms-flex: 57.5%;
           flex: 57.5%;
-  width: 100%;
   position: relative;
   top: -80px;
   right: -80px;
@@ -165,29 +211,22 @@ header {
 .images-side img {
   width: 100%;
   min-width: 500px;
+  max-width: 750px;
 }
 
 .reasons {
   background-color: var(--light-gray);
+  margin: 1.5rem 0;
 }
 
-.inner-reasons {
+.inner-reasons, .inner-articles {
   width: 90%;
-  margin: auto;
+  margin: 3rem auto;
   padding: 4rem 0;
 }
 
-.reasons-title h2 {
-  font-weight: var(--fw-400);
-}
-
-.reasons-title p {
-  line-height: 20px;
-  font-weight: var(--fw-300);
-  padding: 1rem 0;
-}
-
 .reasons-cards {
+  margin: 3rem auto;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[4];
@@ -206,15 +245,6 @@ header {
           flex-direction: column;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-}
-
-.reasons-card h3 {
-  text-transform: capitalize;
-}
-
-.reasons-card p {
-  line-height: 20px;
-  font-weight: var(--fw-300);
 }
 
 /* Button */

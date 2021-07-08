@@ -38,7 +38,21 @@ ul {
     --fw-400: 400;
     --fw-700: 700;
 }
-
+h1 {
+    font-weight: var(--fw-300);
+    font-size: 3rem;
+}
+h2 {
+    font-weight: var(--fw-400);
+}
+h3 {
+    text-transform: capitalize;
+}
+p {
+    line-height: 20px;
+    font-weight: var(--fw-300);
+    padding: 2rem 0;
+}
 /*Header*/
 
 header {
@@ -76,9 +90,31 @@ header {
 }
 .navigation ul a {
     color: var(--gray-blue);
+    position: relative;
 }
 .navigation ul a:hover {
     color: var(--dark-blue);
+}
+.navigation ul a:hover::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    bottom: -30px;
+    background-image: linear-gradient(to right, var(--lime-green) , var(--bright-cyan) 50%);
+    background-size: 300%;
+    animation: animatedGradient 3s ease-in-out alternate infinite;
+}
+@keyframes animateGradient {
+    0% {
+        background-size: 100%;
+    }
+    50% {
+        background-size: 200%;
+    }
+    100% {
+        background-size: 600%;
+    }
 }
 
 /* Main */
@@ -98,14 +134,7 @@ header {
     margin-top: -5rem;
     flex: 42.5%;
 }
-.text-side h1 {
-    font-weight: var(--fw-500);
-}
-.text-side p {
-    line-height: 20px;
-    font-weight: var(--fw-300);
-    padding: 2rem 0;
-}
+
 .images-side {
     height: 600px;
     background-image: url(./images/bg-intro-desktop.svg);
@@ -113,7 +142,6 @@ header {
     background-size: 100%;
     background-repeat: no-repeat;
     flex: 57.5%;
-    width: 100%;
     position: relative;
     top: -80px;
     right: -80px;
@@ -121,27 +149,20 @@ header {
 .images-side img {
     width: 100%;
     min-width: 500px;
+    max-width: 750px;
 }
 .reasons {
     background-color: var(--light-gray);
+    margin: 1.5rem 0 ;
 }
-.inner-reasons {
+.inner-reasons,.inner-articles  {
     width: 90%;
-    margin: auto;
+    margin: 3rem auto;
     padding: 4rem 0;
 }
-.reasons-title {
-    // margin-top: -4rem;
-}
-.reasons-title h2 {
-    font-weight: var(--fw-400);
-}
-.reasons-title p{
-    line-height: 20px;
-    font-weight: var(--fw-300);
-    padding: 1rem 0;
-}
+
 .reasons-cards {
+    margin: 3rem auto;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 1rem;
@@ -152,13 +173,8 @@ header {
     flex-direction: column;
     justify-content: space-around;
 }
-.reasons-card h3 {
-    text-transform: capitalize;
-}
-.reasons-card p {
-    line-height: 20px;
-    font-weight: var(--fw-300);
-}
+
+
 /* Button */
 .request-invite-btn {
     padding: 10px;
