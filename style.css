@@ -133,7 +133,6 @@ header {
 }
 
 .navigation ul a:hover::before {
-<<<<<<< Updated upstream
   content: '';
   position: absolute;
   width: 100%;
@@ -167,42 +166,6 @@ header {
   }
   100% {
     background-size: 600%;
-=======
-  position: absolute;
-  content: "";
-  bottom: -30px;
-  height: 4px;
-  width: 100%;
-  border-radius: 4px;
-  background-image: -webkit-gradient(linear, left top, right top, from(var(--lime-green)), color-stop(50%, var(--bright-cyan)));
-  background-image: linear-gradient(to right, var(--lime-green), var(--bright-cyan) 50%);
-  background-size: 300%;
-  -webkit-animation: animatedgradient 3s ease alternate infinite;
-          animation: animatedgradient 3s ease alternate infinite;
-}
-
-@-webkit-keyframes animatedgradient {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-@keyframes animatedgradient {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
->>>>>>> Stashed changes
   }
 }
 
@@ -351,12 +314,11 @@ footer {
 
 /* Button */
 .request-invite-btn {
-  display: inline-block;
   padding: 10px;
   text-align: center;
   background-size: 200% auto;
   text-transform: capitalize;
-  width: 150px;
+  width: 200px;
   -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
           box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   -webkit-transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
